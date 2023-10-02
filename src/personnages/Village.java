@@ -29,24 +29,24 @@ public class Village {
 	}
 	
 	public static void afficherVillageois(Village village) {
-		System.out.println("Dans village du chef " + village.chef.getNom() + " vivent les l�gendaires gaulois :");
+		System.out.println("Dans village du chef " + village.chef.getNom() + " vivent les legendaires gaulois :");
 		for (int i = 0; i < village.nbVillageois; i++) {
 			System.out.println("- " + village.trouverHabitant(i).getNom());
 		}
 	}
 	
 	public static void main(String[] args) {
-		Village village = new Village("Village des Irr�ductibles", 30);
+		Village village = new Village("Village des Irreductibles", 30);
 		// Gaulois gaulois = village.trouverHabitant(1);
 		// Il n'y a toujours pas d'habitant dans le village
 		Chef chef = new Chef("Abraracourcix", 6, village);
 		village.setChef(chef);
-		Gaulois gaulois0 = new Gaulois("Ast�rix", 8);
+		Gaulois gaulois0 = new Gaulois("Asterix", 8);
 		village.ajouterHabitant(gaulois0);
 		// Gaulois gaulois = village.trouverHabitant(1);
 		// System.out.println(gaulois);
 		// Gaulois n'est pas un string our qu'il puisse l'afficher il faut print le nom du chef
-		Gaulois gaulois1 = new Gaulois("Ob�lix", 25);
+		Gaulois gaulois1 = new Gaulois("Obelix", 25);
 		village.ajouterHabitant(gaulois1);
 		afficherVillageois(village);
 	}
