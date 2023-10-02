@@ -2,10 +2,9 @@ package personnages;
 
 public class Village {
 	private String nom;
-	//private Chef chef;
+	private Chef chef;
 	private int nbVillageois = 0;
 	private Gaulois [] villageois;
-	private Chef chef;
 	
 	public Village(String nom, int nbVillageoisMaximum) {
 		this.nom = nom;
@@ -30,24 +29,24 @@ public class Village {
 	}
 	
 	public static void afficherVillageois(Village village) {
-		System.out.println("Dans village du chef " + village.chef.getNom() + " vivent les légendaires gaulois :");
+		System.out.println("Dans village du chef " + village.chef.getNom() + " vivent les lï¿½gendaires gaulois :");
 		for (int i = 0; i < village.nbVillageois; i++) {
 			System.out.println("- " + village.trouverHabitant(i).getNom());
 		}
 	}
 	
 	public static void main(String[] args) {
-		Village village = new Village("Village des Irréductibles", 30);
+		Village village = new Village("Village des Irrï¿½ductibles", 30);
 		// Gaulois gaulois = village.trouverHabitant(1);
 		// Il n'y a toujours pas d'habitant dans le village
 		Chef chef = new Chef("Abraracourcix", 6, village);
 		village.setChef(chef);
-		Gaulois gaulois0 = new Gaulois("Astérix", 8);
+		Gaulois gaulois0 = new Gaulois("Astï¿½rix", 8);
 		village.ajouterHabitant(gaulois0);
 		// Gaulois gaulois = village.trouverHabitant(1);
 		// System.out.println(gaulois);
 		// Gaulois n'est pas un string our qu'il puisse l'afficher il faut print le nom du chef
-		Gaulois gaulois1 = new Gaulois("Obélix", 25);
+		Gaulois gaulois1 = new Gaulois("Obï¿½lix", 25);
 		village.ajouterHabitant(gaulois1);
 		afficherVillageois(village);
 	}
